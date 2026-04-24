@@ -1,6 +1,6 @@
-# AI Medical Document Dashboard
+# AI Medical Workflow Automation Platform
 
-AI Medical Document Dashboard is a full-stack healthcare workflow prototype for uploading medical documents, extracting structured clinical data, generating reports, chatting over chart content, running clinician-directed automation workflows, and importing read-only SMART on FHIR data.
+AI Medical workflow platform is a healthcare application for analyzing medical documents, extracting structured clinical data, generating reports and SOAP summaries, running clinician-directed automation workflows and importing read-only SMART on FHIR data.
 
 The app combines:
 
@@ -11,9 +11,9 @@ The app combines:
 
 ## What the app does
 
-- Authenticates users with local email/password sign-up and login
+- Authenticates users with email/password sign-up and login
 - Uploads `.txt` and `.pdf` medical documents
-- Extracts medications, diagnoses, allergies, lab results, and a concise clinical summary
+- Extracts medications, diagnoses, allergies and lab results
 - Generates a clinician-facing report from one or more selected documents
 - Answers chart-grounded questions in the workspace chat
 - Runs a `Workflow Automation Agent` that interprets clinician instructions and orchestrates multi-step outputs
@@ -24,8 +24,8 @@ The app combines:
 ## Tech stack
 
 - Frontend: React, TypeScript, Vite, Tailwind-based UI components
-- Backend: FastAPI, Pydantic, TinyDB
-- AI runtime: Hugging Face Transformers, PyTorch
+- Backend: FastAPI, PyTorch, Pydantic, TinyDB
+- AI runtime: Hugging Face Transformers
 - Optional remote inference: Kaggle GPU worker, polling job queue, or direct HTTP worker behind `nginx`
 
 ## Project structure
@@ -126,7 +126,7 @@ The backend supports several generation backends.
 
 ### Default local behavior
 
-On CPU-only development machines, the app uses a reliable local deterministic fallback for report, chat, and workflow generation. This keeps the app responsive even when a full Hugging Face model would be too heavy or slow.
+On CPU-only development machines, the app uses a reliable local deterministic fallback for report, chat and workflow generation. This keeps the app responsive even when a full Hugging Face model is heavy or slow.
 
 ### Optional local Hugging Face model
 
@@ -313,10 +313,6 @@ curl http://127.0.0.1:8000/api/health
 
 - TinyDB is used for local development, not production-scale persistence
 - Auth is local and development-oriented
-- The current SMART connector is read-only
-- Handoff generation exists, but handoff delivery to another clinician or EHR is not implemented yet
-- This repository is a prototype and is not production-hardened for real PHI workflows, compliance, or enterprise deployment
+- Handoff generation exists, but handoff delivery to another clinician is not implemented yet
+- This repository is a working prototype and is not production-hardened for real PHI workflows or enterprise deployment
 
-## Credits
-
-The original visual starting point came from a Figma concept referenced by the earlier placeholder README. The current codebase has since been extended into a full frontend + backend application with local auth, workflow automation, GPU-worker options, and SMART on FHIR import support.

@@ -1,4 +1,4 @@
-# AI Medical Workflow Automation Platform
+# Medical Workflow Automation Platform
 
 AI Medical workflow platform is a software application for analyzing medical documents, extracting structured clinical data, generating reports and SOAP summaries, running clinician-directed automation workflows and importing read-only SMART on FHIR data.
 

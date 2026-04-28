@@ -28,6 +28,15 @@ The app combines:
 - AI runtime: Hugging Face Transformers
 - Optional remote inference: Kaggle GPU worker, polling job queue, or direct HTTP worker behind `nginx`
 
+## Project Output
+
+<p align="center">
+  <img src="images/report_generation.png" width="250" height="255">
+  <img src="images/SOAP_summary.png" width="250" height="255">
+  <img src="images/workflow_automation.png" width="250" height="255">
+  <img src="images/EHR_connectors.png" width="250" height="255">
+</p>
+
 ## Project structure
 
 ```text
@@ -49,6 +58,8 @@ AI Medical Document Dashboard/
 ├── package.json
 └── README.md
 ```
+
+<img src="videos/Summary.gif" alt="Demo" width="600"/>
 
 ## Core product flows
 

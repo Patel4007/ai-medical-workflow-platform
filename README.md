@@ -30,6 +30,8 @@ The app combines:
 
 ## Project Output
 
+<img src="videos/Summary.gif" alt="Demo" width="800" height="600"/>
+
 <p align="center">
   <img src="images/report_generation.png" width="250" height="255">
   <img src="images/SOAP_summary.png" width="250" height="255">
@@ -58,8 +60,6 @@ AI Medical Document Dashboard/
 ├── package.json
 └── README.md
 ```
-
-<img src="videos/Summary.gif" alt="Demo" width="800" height="600"/>
 
 ## Core product flows
 

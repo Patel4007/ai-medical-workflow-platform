@@ -59,7 +59,7 @@ AI Medical Document Dashboard/
 └── README.md
 ```
 
-<img src="videos/Summary.gif" alt="Demo" width="600"/>
+<img src="videos/Summary.gif" alt="Demo" width="800" height="600"/>
 
 ## Core product flows
 
